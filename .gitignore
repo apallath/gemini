@@ -12,3 +12,6 @@
 *.toc
 *.fdb_latexmk
 *.fls
+
+# MacOS
+.DS_Store

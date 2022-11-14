@@ -1,4 +1,6 @@
-% Gemini theme
+% Gemini (Penn) theme
+% https://github.com/apallath/gemini_penn
+% Fork of the Gemini theme by @anishathalye
 % https://github.com/anishathalye/gemini
 
 \documentclass[final]{beamer}
@@ -11,7 +13,7 @@
 \usepackage{lmodern}
 \usepackage[size=custom,width=120,height=72,scale=1.0]{beamerposter}
 \usetheme{gemini}
-\usecolortheme{gemini}
+\usecolortheme{penn}
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{tikz}
@@ -57,8 +59,9 @@
 % ====================
 
 % use this to include logos on the left and/or right side of the header:
-% \logoright{\includegraphics[height=7cm]{logo1.pdf}}
-% \logoleft{\includegraphics[height=7cm]{logo2.pdf}}
+\logoleft{\includegraphics[height=5cm]{logo/penn_reverse.png}}
+% \logoleft{\includegraphics[height=5cm]{logo2.pdf}}
+
 
 % ====================
 % Body
@@ -182,8 +185,8 @@
             axis lines=center,
             axis line style={-},
             ticks=none]
-          \addplot[red] {sin(deg(x))};
-          \addplot[blue] {cos(deg(x))};
+          \addplot[pennred] {sin(deg(x))};
+          \addplot[pennblue] {cos(deg(x))};
         \end{axis}
       \end{tikzpicture}
       \caption{Another figure caption.}
@@ -218,10 +221,6 @@
           \item Donec rhoncus vestibulum erat, quis aliquam leo
             gravida egestas.
         \end{itemize}
-      \item \textbf{Sed luctus, elit sit amet} dictum maximus, diam dolor
-        faucibus purus, sed lobortis justo erat id turpis.
-      \item \textbf{Pellentesque facilisis dolor in leo} bibendum congue.
-        Maecenas congue finibus justo, vitae eleifend urna facilisis at.
     \end{itemize}
 
   \end{block}
@@ -244,14 +243,14 @@
     faucibus. Cras eleifend dolor eu nulla suscipit suscipit. Sed lobortis non
     felis id vulputate.
 
-    \heading{A heading inside a block}
+    \heading{\color{pennred} A heading inside a block}
 
     Praesent consectetur mi $x^2 + y^2$ metus, nec vestibulum justo viverra
     nec. Proin eget nulla pretium, egestas magna aliquam, mollis neque. Vivamus
     dictum $\mathbf{u}^\intercal\mathbf{v}$ sagittis odio, vel porta erat
     congue sed. Maecenas ut dolor quis arcu auctor porttitor.
 
-    \heading{Another heading inside a block}
+    \heading{\color{pennblue} Another heading inside a block}
 
     Sed augue erat, scelerisque a purus ultricies, placerat porttitor neque.
     Donec $P(y \mid x)$ fermentum consectetur $\nabla_x P(y \mid x)$ sapien

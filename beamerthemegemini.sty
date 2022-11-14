@@ -1,4 +1,6 @@
-% Gemini theme
+% Gemini (Penn) theme
+% https://github.com/apallath/gemini_penn
+% Fork of the Gemini theme by @anishathalye
 % https://github.com/anishathalye/gemini
 
 % ====================
@@ -11,30 +13,33 @@
 \RequirePackage{fontspec}
 \RequirePackage{calc}
 
+\usepackage{ebgaramond-maths}
+\usepackage{ebgaramond}
+
 % ====================
 % Fonts
 % ====================
 
-\newfontfamily\Raleway[Ligatures=TeX]{Raleway}
-\newfontfamily\Lato[Ligatures=TeX]{Lato}
+\newfontfamily\EBGaramond[Ligatures=TeX]{ebgaramond}
+\newfontfamily\Roboto[Ligatures=TeX]{Roboto}	
 
 \usefonttheme{professionalfonts}
 
-\setsansfont{Lato}[
+\setsansfont{Roboto}[
   UprightFont=*-Light,
   ItalicFont=*-LightItalic,
   BoldFont=*-Regular,
   BoldItalicFont=*-Italic
 ]
 
-\setbeamerfont{headline}{family=\Raleway}
+\setbeamerfont{headline}{family=\EBGaramond}
 \setbeamerfont{headline title}{size=\Huge,series=\bfseries}
 \setbeamerfont{headline author}{size=\Large}
 \setbeamerfont{headline institute}{size=\normalsize}
-\setbeamerfont{block title}{family=\Raleway,size=\large,series=\bfseries}
-\setbeamerfont{heading}{family=\Lato,series=\bfseries}
+\setbeamerfont{block title}{family=\EBGaramond,size=\large,series=\bfseries}
+\setbeamerfont{heading}{family=\Roboto,series=\bfseries}
 \setbeamerfont{caption}{size=\small}
-\setbeamerfont{footline}{family=\Raleway,size=\normalsize}
+\setbeamerfont{footline}{family=\EBGaramond,size=\normalsize}
 
 % ====================
 % Macros
@@ -161,11 +166,9 @@
 % Block
 \setbeamertemplate{block begin}
 {
-  \begin{beamercolorbox}[colsep*=0ex,dp=2ex,center]{block title}
+  \begin{beamercolorbox}[rounded=True,shadow=True,colsep*=0ex,dp=2ex,center]{block title}
     \vskip0pt
     \usebeamerfont{block title}\insertblocktitle
-    \vskip-1.25ex
-    \begin{beamercolorbox}[colsep=0.025ex]{block separator}\end{beamercolorbox}
   \end{beamercolorbox}
   {\parskip0pt\par}
   \usebeamerfont{block body}
@@ -173,10 +176,13 @@
   \begin{beamercolorbox}[colsep*=0ex]{block body}
   \justifying
   \setlength{\parskip}{1ex}
-  \vskip-2ex
+  \vskip1ex
+  \begin{adjustwidth}{2ex}{2ex}
 }
 \setbeamertemplate{block end}
 {
+  \end{adjustwidth}
+  \vskip2ex
   \end{beamercolorbox}
   \vskip0pt
   \vspace*{2ex}
@@ -188,22 +194,20 @@
   \begin{beamercolorbox}[colsep*=0ex,dp=2ex,center]{block alerted title}
     \vskip0pt
     \usebeamerfont{block title}\insertblocktitle
-    \vskip-1.25ex
-    \begin{beamercolorbox}[colsep=0.025ex]{block alerted separator}\end{beamercolorbox}
   \end{beamercolorbox}
   {\parskip0pt\par}
   \usebeamerfont{block body}
   \vskip-0.5ex
   \begin{beamercolorbox}[colsep*=0ex]{block alerted body}
   \justifying
-  \begin{adjustwidth}{1ex}{1ex}
   \setlength{\parskip}{1ex}
-  \vskip-2ex
+  \vskip1ex
+  \begin{adjustwidth}{2ex}{2ex}
 }
 \setbeamertemplate{block alerted end}
 {
   \end{adjustwidth}
-  \vskip1ex
+  \vskip2ex
   \end{beamercolorbox}
   \vskip0pt
   \vspace*{2ex}
@@ -216,21 +220,20 @@
     \vskip0pt
     \usebeamerfont{block title}\insertblocktitle
     \vskip-1.25ex
-    \begin{beamercolorbox}[colsep=0.025ex]{block example separator}\end{beamercolorbox}
   \end{beamercolorbox}
   {\parskip0pt\par}
   \usebeamerfont{block body}
   \vskip-0.5ex
   \begin{beamercolorbox}[colsep*=0ex]{block example body}
   \justifying
-  \begin{adjustwidth}{1ex}{1ex}
   \setlength{\parskip}{1ex}
-  \vskip-2ex
+  \vskip1ex
+  \begin{adjustwidth}{2ex}{2ex}
 }
 \setbeamertemplate{block example end}
 {
   \end{adjustwidth}
-  \vskip1ex
+  \vskip2ex
   \end{beamercolorbox}
   \vskip0pt
   \vspace*{2ex}
